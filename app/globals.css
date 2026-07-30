@@ -1,26 +1,288 @@
 @import "tailwindcss";
 
+/* ========== SAKURA BLOSSOM THEME ========== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0612;
+  --surface: #150e20;
+  --surface-2: #1c1329;
+
+  --primary: #F4A7BB;
+  --primary-dark: #e8899f;
+  --secondary: #FFD1DC;
+
+  --accent: #C4A7E7;
+  --accent-2: #a78bfa;
+
+  --sakura-50: #fff5f7;
+  --sakura-100: #ffe0e8;
+  --sakura-200: #FFD1DC;
+  --sakura-300: #F4A7BB;
+  --sakura-400: #ec6d92;
+  --sakura-500: #e04472;
+  --sakura-glow: rgba(244, 167, 187, 0.15);
+  --sakura-glow-strong: rgba(244, 167, 187, 0.3);
+
+  --text: #f8f0f5;
+  --text-secondary: #b8a8c8;
+  --text-muted: #8a7a9a;
+
+  --border: #2a1f38;
+  --border-light: #3d2e52;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ========== BASE STYLES ========== */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ========== SCROLLBAR ========== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ========== KEYFRAME ANIMATIONS ========== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-12px) rotate(2deg); }
+  50% { transform: translateY(-6px) rotate(-1deg); }
+  75% { transform: translateY(-16px) rotate(1deg); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-14px) rotate(-2deg); }
+  66% { transform: translateY(-8px) rotate(3deg); }
+}
+
+@keyframes sakura-fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(22vh) translateX(30px) rotate(90deg) scale(0.95);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-20px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(75vh) translateX(40px) rotate(270deg) scale(0.85);
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(105vh) translateX(10px) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes sakura-fall-2 {
+  0% {
+    transform: translateY(-5vh) translateX(0) rotate(45deg) scale(0.9);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  30% {
+    transform: translateY(28vh) translateX(-40px) rotate(135deg) scale(0.85);
+  }
+  60% {
+    transform: translateY(58vh) translateX(25px) rotate(225deg) scale(0.8);
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(110vh) translateX(-15px) rotate(405deg) scale(0.75);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 7s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+/* Staggered delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1500 { animation-delay: 1500ms; }
+.delay-2000 { animation-delay: 2000ms; }
+
+/* ========== SAKURA PETAL STYLES ========== */
+
+.sakura-petal {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+}
+
+.sakura-petal::before {
+  content: "";
+  display: block;
+  border-radius: 50% 0 50% 0;
+  background: linear-gradient(135deg, var(--sakura-200), var(--sakura-300));
+  box-shadow: 0 0 6px rgba(244, 167, 187, 0.3);
+}
+
+.sakura-petal--sm::before {
+  width: 8px;
+  height: 8px;
+}
+
+.sakura-petal--md::before {
+  width: 12px;
+  height: 12px;
+}
+
+.sakura-petal--lg::before {
+  width: 16px;
+  height: 16px;
+}
+
+/* ========== GLASSMORPHISM ========== */
+
+.glass {
+  background: rgba(21, 14, 32, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(244, 167, 187, 0.08);
+}
+
+.glass-strong {
+  background: rgba(21, 14, 32, 0.8);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(244, 167, 187, 0.12);
+}
+
+/* ========== GRADIENT TEXT ========== */
+
+.gradient-sakura {
+  background: linear-gradient(135deg, var(--sakura-300), var(--sakura-200), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-sakura-vivid {
+  background: linear-gradient(135deg, var(--sakura-400), var(--sakura-300), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== SECTION SPACING ========== */
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
