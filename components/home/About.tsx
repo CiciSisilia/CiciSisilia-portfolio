@@ -45,7 +45,7 @@ const INTERESTS = [
 
 export default function About() {
   return (
-    <section id="about" className="section-padding relative overflow-hidden">
+    <section id="about" className="section-padding relative overflow-hidden scroll-mt-20 md:scroll-mt-24">
 
       {/* Background glow */}
       <div className="animate-pulse-glow absolute right-[-200px] top-1/3 h-[400px] w-[400px] rounded-full bg-[var(--sakura-300)]/10 blur-[180px]" />

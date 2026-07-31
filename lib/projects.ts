@@ -4,7 +4,6 @@ export type Project = {
   description: string;
   techs: string[];
   gradient: string;
-  icon: string;
   githubUrl: string;
   images: string[];
   details: {
@@ -17,32 +16,39 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "sistem-informasi-inventaris-teknisi",
-    title: "Sistem Informasi Inventaris Teknisi",
+    slug: "sistem-informasi-pengelolaan-inventaris-teknisi",
+    title: "Sistem Informasi Pengelolaan Inventaris Teknisi Berbasis Web",
     description:
       "Aplikasi web yang dikembangkan untuk mendukung pengelolaan inventaris teknisi di PT. Aplikanusa Lintasarta Duri. Sistem menyediakan fitur manajemen data barang, kategori, peminjaman, pengembalian, laporan PDF, pencarian dan filter data, serta notifikasi email otomatis menggunakan Laravel dan MySQL.",
-    techs: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+    techs: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "Xampp"],
     gradient: "from-red-500/20 to-orange-500/20",
-    icon: "🎓",
     githubUrl: "https://github.com/CiciSisilia",
     images: [
-      "/images/projects/placeholder-1.jpg",
-      "/images/projects/placeholder-2.jpg",
+      "/images/projects/inventaris.png",
+      "/images/projects/inventaris-1.png",
+      "/images/projects/inventaris-2.png",
+      "/images/projects/inventaris-3.png",
+      "/images/projects/inventaris-4.png",
+      "/images/projects/magang.jpeg",
     ],
     details: {
       objective:
-        "Membangun sistem terpusat yang memudahkan mahasiswa, dosen, dan staf administrasi dalam mengelola aktivitas akademik secara efisien dan transparan.",
+        "Membangun sistem terpusat yang memudahkan pengawasan inventaris barang, pelacakan peminjaman alat teknisi, dan pembuatan laporan secara cepat dan akurat.",
       features: [
-        "Sistem Autentikasi Role-based (Admin, Dosen, Mahasiswa)",
-        "Pengisian dan Validasi Kartu Rencana Studi (KRS)",
-        "Melihat Kartu Hasil Studi (KHS) dan Transkrip Nilai",
-        "Manajemen Jadwal Kuliah dan Absensi",
-        "Export laporan akademik ke PDF/Excel",
+        "Manajemen Data Inventaris",
+        "Manajemen Peminjaman & Pengembalian Barang",
+        "Manajemen Pengguna (Admin & Teknisi)",
+        "Notifikasi Otomatis melalui Email",
+        "Pencarian & Filter Data Inventaris",
+        "Laporan Inventaris dan Riwayat Peminjaman",
+        "Dashboard Admin & Teknisi",
+        "Kelola Kategori dan Barang",
+
       ],
       challenges:
-        "Struktur data akademik (relasi antara mahasiswa, mata kuliah, jadwal, dan nilai) cukup kompleks. Menjaga agar query database tetap cepat saat data bertambah besar menjadi tantangan utama.",
+        "Pengelolaan inventaris masih dilakukan secara manual sehingga menyulitkan pencatatan, pelacakan, dan pemantauan aset.",
       solutions:
-        "Menerapkan teknik optimasi database seperti indexing pada tabel-tabel utama, menggunakan Eager Loading di Laravel (Eloquent) untuk menghindari N+1 query problem, dan menormalkan skema database.",
+        "Mengembangkan aplikasi berbasis Laravel dengan fitur manajemen inventaris, notifikasi email, serta pencarian data untuk meningkatkan efisiensi pengelolaan inventaris.",
     },
   },
   {
@@ -52,54 +58,61 @@ export const PROJECTS: Project[] = [
       "Website portfolio personal dengan tema Sakura Blossom menggunakan Next.js dan React. Menampilkan animasi interaktif dan desain modern glassmorphism.",
     techs: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     gradient: "from-pink-500/20 to-purple-500/20",
-    icon: "🌸",
     githubUrl: "https://github.com/CiciSisilia",
     images: [
-      "/images/projects/imageproject1.png",
+      "/images/projects/portfolio-1.png",
+      "/images/projects/portfolio-2.png",
+      "/images/projects/portfolio-3.png",
+      "/images/projects/portfolio-4.png",
     ],
     details: {
       objective:
         "Menampilkan identitas profesional, keterampilan, dan pengalaman kerja saya dalam antarmuka yang menarik, modern, dan sangat responsif.",
       features: [
         "Desain UI/UX Kustom dengan tema 'Sakura Blossom'",
-        "Animasi kompleks (CSS keyframes) tanpa mengorbankan performa",
+        "Animasi partikel & floating tech modern",
         "Desain Fully Responsive untuk mobile, tablet, dan desktop",
-        "Komponen UI Reusable (Button, Cards, Timeline)",
+        "Galeri Kolase Proyek 4 Kolom Interaktif",
         "SEO Optimized dengan metadata Next.js",
       ],
       challenges:
-        "Membuat animasi partikel (kelopak sakura jatuh) yang berjalan halus di semua perangkat tanpa membebani thread utama JavaScript.",
+        "Membuat animasi partikel (kelopak sakura jatuh) dan menu mobile yang berjalan mulus tanpa mengganggu scroll page di perangkat seluler.",
       solutions:
-        "Menggunakan animasi CSS Keyframes murni untuk pergerakan partikel, menghindari animasi berbasis Javascript (seperti requestAnimationFrame atau library berat) sehingga rendering ditangani langsung oleh GPU browser.",
+        "Menggunakan animasi CSS Keyframes murni untuk rendering GPU serta menyelaraskan scroll-margin-top dan overflow lock pada mobile menu.",
     },
   },
   {
-    slug: "dashboard-data-analytics",
-    title: "Dashboard Data Analytics",
+    slug: "analisis-interaktif-persebaran-dan-dampak-bencana-alam-di-indonesia-berdasarkan-lokasi-jenis-dan-waktu",
+    title: "Analisis Interaktif Persebaran dan Dampak Bencana Alam di Indonesia Berdasarkan Lokasi, Jenis, dan Waktu",
     description:
-      "Dashboard interaktif untuk visualisasi data menggunakan chart dan tabel dinamis. Mendukung filter dan export data ke berbagai format.",
-    techs: ["React", "JavaScript", "Chart.js", "REST API"],
+      "Membangun dashboard interaktif menggunakan Tableau Public untuk menganalisis persebaran dan dampak bencana alam di Indonesia berdasarkan lokasi, jenis, dan waktu menggunakan data BNPB periode 2018–2024. Dashboard menyediakan visualisasi spasial, temporal, dan analisis dampak guna mendukung pengambilan keputusan serta mitigasi bencana.",
+    techs: ["Tableau"],
     gradient: "from-blue-500/20 to-cyan-500/20",
-    icon: "📊",
     githubUrl: "https://github.com/CiciSisilia",
     images: [
-      "/images/projects/placeholder-1.jpg",
-      "/images/projects/placeholder-2.jpg",
+      "/images/projects/datavisual.png",
+      "/images/projects/datavisual-1.png",
+      "/images/projects/datavisual-2.png",
+      "/images/projects/datavisual-3.png",
+      "/images/projects/datavisuall.jpeg",
     ],
     details: {
       objective:
-        "Menyediakan alat bagi stakeholder untuk memantau performa bisnis (KPIs) secara real-time dengan antarmuka visual yang intuitif.",
+        "Mengembangkan dashboard interaktif menggunakan Tableau Public untuk menganalisis persebaran dan dampak bencana alam di Indonesia berdasarkan lokasi, jenis bencana, dan waktu, sehingga menghasilkan wawasan yang dapat mendukung mitigasi bencana, pengambilan keputusan, serta meningkatkan kesiapsiagaan masyarakat..",
       features: [
-        "Integrasi Data Real-time via REST API",
-        "Visualisasi interaktif (Bar, Line, Pie charts)",
-        "Sistem Filtering data berdasarkan rentang waktu dan kategori",
-        "Data Grid interaktif dengan pagination dan sorting",
-        "Fitur Export ke CSV",
+        "Dashboard interaktif menggunakan Tableau Public.",
+        "Peta persebaran bencana (Choropleth Map) berdasarkan provinsi di Indonesia.",
+        "Visualisasi tren waktu (Line Chart) untuk melihat perubahan jumlah bencana dari tahun 2018–2024.",
+        "Visualisasi jumlah kejadian berdasarkan jenis bencana (Bar Chart).",
+        "Analisis 10 provinsi dengan jumlah korban meninggal terbanyak.",
+        "Visualisasi jumlah korban berdasarkan jenis bencana (meninggal, luka-luka, dan hilang).",
+        "Filter interaktif berdasarkan tahun dan jenis bencana.",
+        "Tooltip informatif yang menampilkan detail data saat pengguna mengarahkan kursor ke visualisasi.",
       ],
       challenges:
-        "Menangani rendering ribuan baris data di sisi klien (browser) sering kali menyebabkan UI lag (jiggle) saat melakukan filtering atau sorting.",
+        "Membersihkan dan menstandarkan data bencana yang masih berupa data mentah agar dapat divisualisasikan secara akurat.",
       solutions:
-        "Menerapkan konsep virtualized list (windowing) untuk tabel data dan me-memoize fungsi-fungsi berat menggunakan useMemo dan useCallback di React, sehingga re-render hanya terjadi jika data benar-benar berubah.",
+        "Melakukan proses data preprocessing menggunakan Microsoft Excel, kemudian membangun dashboard interaktif dengan Tableau Public untuk menghasilkan visualisasi yang akurat dan mudah dianalisis.",
     },
   },
 ];

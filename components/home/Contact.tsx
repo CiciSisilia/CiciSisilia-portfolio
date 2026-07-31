@@ -37,7 +37,7 @@ const SOCIALS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding relative overflow-hidden">
+    <section id="contact" className="section-padding relative overflow-hidden scroll-mt-20 md:scroll-mt-24">
 
       {/* Background glows */}
       <div className="animate-pulse-glow absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-[var(--sakura-300)]/8 blur-[200px]" />

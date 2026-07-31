@@ -35,7 +35,7 @@ const EXPERIENCES: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-padding relative overflow-hidden">
+    <section id="experience" className="section-padding relative overflow-hidden scroll-mt-20 md:scroll-mt-24">
 
       {/* Background glow */}
       <div className="animate-pulse-glow absolute left-[-100px] bottom-1/4 h-[350px] w-[350px] rounded-full bg-[var(--accent)]/8 blur-[160px]" />

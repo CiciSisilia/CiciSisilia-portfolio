@@ -7,7 +7,7 @@ import GlassCard from "@/components/ui/GlassCard";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden">
+    <section id="hero" className="relative min-h-screen overflow-hidden scroll-mt-20">
 
       {/* Background Glows — Sakura */}
       <div className="animate-pulse-glow absolute left-[-120px] top-20 h-[420px] w-[420px] rounded-full bg-[var(--sakura-300)]/15 blur-[150px]" />
@@ -76,19 +76,19 @@ export default function Hero() {
           </div>
 
           {/* ================= RIGHT ================= */}
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center overflow-hidden py-6 sm:overflow-visible sm:py-0">
 
             {/* Glow */}
-            <div className="animate-pulse-glow absolute h-[420px] w-[420px] rounded-full bg-[var(--sakura-300)]/15 blur-[140px]" />
+            <div className="animate-pulse-glow absolute h-[320px] w-[320px] rounded-full bg-[var(--sakura-300)]/15 blur-[140px] sm:h-[420px] sm:w-[420px]" />
 
             {/* Orbiting ring */}
-            <div className="animate-spin-slow absolute h-[480px] w-[480px] rounded-full border border-dashed border-[var(--sakura-300)]/10" />
+            <div className="animate-spin-slow absolute h-[340px] w-[340px] rounded-full border border-dashed border-[var(--sakura-300)]/10 sm:h-[480px] sm:w-[480px]" />
 
             {/* Floating Tech Icons */}
             <FloatingTech />
 
             {/* Profile Card */}
-            <GlassCard className="relative z-10 h-[480px] w-[340px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_80px_rgba(244,167,187,0.2)] sm:h-[520px] sm:w-[370px]">
+            <GlassCard className="relative z-10 h-[440px] w-[300px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_80px_rgba(244,167,187,0.2)] sm:h-[520px] sm:w-[370px]">
 
               {/* Profile Image */}
               <Image

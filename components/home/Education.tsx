@@ -3,7 +3,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function Education() {
   return (
-    <section id="education" className="section-padding relative overflow-hidden">
+    <section id="education" className="section-padding relative overflow-hidden scroll-mt-20 md:scroll-mt-24">
 
       {/* Background glow */}
       <div className="animate-pulse-glow absolute right-[-150px] top-1/3 h-[300px] w-[300px] rounded-full bg-[var(--sakura-300)]/8 blur-[150px]" />

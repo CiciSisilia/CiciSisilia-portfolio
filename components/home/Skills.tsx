@@ -111,7 +111,7 @@ const CATEGORIES: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding relative overflow-hidden">
+    <section id="skills" className="section-padding relative overflow-hidden scroll-mt-20 md:scroll-mt-24">
 
       {/* Background glows */}
       <div className="animate-pulse-glow absolute left-[-150px] top-1/4 h-[350px] w-[350px] rounded-full bg-[var(--accent)]/10 blur-[160px]" />

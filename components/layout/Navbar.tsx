@@ -23,6 +23,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const handleNavClick = () => {
+    setMobileOpen(false);
+  };
+
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
@@ -83,26 +98,25 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[var(--background)]/95 backdrop-blur-xl transition-all duration-500 md:hidden ${
-          mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-[var(--background)]/98 backdrop-blur-2xl transition-all duration-300 md:hidden ${
+          mobileOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
         }`}
       >
-        <nav className="flex h-full flex-col items-center justify-center gap-6">
-          {NAV_LINKS.map((link, i) => (
+        <nav className="flex w-full max-w-xs flex-col items-center justify-center space-y-4 px-6 py-12 text-center overflow-y-auto max-h-screen">
+          {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="text-2xl font-semibold text-white transition-colors duration-200 hover:text-[var(--sakura-300)]"
-              style={{ animationDelay: `${i * 80}ms` }}
+              onClick={handleNavClick}
+              className="block w-full py-2.5 text-xl font-bold text-white transition-colors duration-200 hover:text-[var(--sakura-300)]"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            onClick={() => setMobileOpen(false)}
-            className="mt-4 rounded-xl bg-gradient-to-r from-[var(--sakura-300)] to-[var(--accent)] px-8 py-3 text-base font-semibold text-[var(--background)]"
+            onClick={handleNavClick}
+            className="mt-4 block w-full rounded-xl bg-gradient-to-r from-[var(--sakura-300)] to-[var(--accent)] py-3.5 text-center text-sm font-bold text-[var(--background)] shadow-lg shadow-[var(--sakura-300)]/20 transition-transform active:scale-95"
           >
             Hire Me
           </a>

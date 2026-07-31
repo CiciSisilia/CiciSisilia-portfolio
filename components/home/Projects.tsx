@@ -23,15 +23,20 @@ export default function Projects() {
               key={project.title}
               className="group flex flex-col overflow-hidden p-0 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(244,167,187,0.1)]"
             >
-              {/* Project Header with Gradient */}
-              <div className={`relative flex h-48 items-center justify-center bg-gradient-to-br ${project.gradient}`}>
-                <span className="text-6xl transition-transform duration-500 group-hover:scale-110">
-                  {project.icon}
-                </span>
-
-                {/* Decorative circles */}
-                <div className="absolute right-4 top-4 h-20 w-20 rounded-full border border-white/5" />
-                <div className="absolute left-6 bottom-6 h-12 w-12 rounded-full border border-white/5" />
+              {/* Project Header with Image Cover */}
+              <div className={`relative h-48 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}>
+                {project.images && project.images[0] ? (
+                  <img
+                    src={project.images[0]}
+                    alt={project.title}
+                    className="h-full w-full object-cover opacity-85 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center text-sm text-[var(--text-muted)]">
+                    No Preview Available
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface)] via-transparent to-black/20" />
               </div>
 
               {/* Content */}
