@@ -59,9 +59,9 @@ export default function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
 
           {/* Left — Photo */}
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center" data-aos="fade-right">
             <div className="animate-pulse-glow absolute h-[350px] w-[350px] rounded-full bg-[var(--accent)]/10 blur-[120px]" />
-            <GlassCard className="relative z-10 h-[400px] w-[320px] overflow-hidden sm:h-[450px] sm:w-[360px]">
+            <GlassCard className="relative z-10 h-[400px] w-[320px] overflow-hidden sm:h-[450px] sm:w-[360px] transition-all duration-500 hover:-translate-y-4 hover:rotate-2 hover:shadow-[0_0_40px_rgba(244,167,187,0.3)]">
               <Image
                 src="/images/profile/sidang2.jpeg"
                 alt="Cici Sisilia — Sidang"
@@ -74,7 +74,7 @@ export default function About() {
           </div>
 
           {/* Right — Info */}
-          <div className="relative z-10">
+          <div className="relative z-10" data-aos="fade-left" data-aos-delay="200">
 
             <h3 className="text-2xl font-bold text-white">
               Cici <span className="text-[var(--sakura-300)]">Sisilia</span>

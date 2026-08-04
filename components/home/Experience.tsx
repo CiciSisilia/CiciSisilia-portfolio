@@ -57,6 +57,8 @@ export default function Experience() {
               key={i}
               className={`relative mb-12 flex flex-col md:flex-row ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
+              data-aos="fade-up"
+              data-aos-delay={i * 150}
             >
               {/* Timeline Node — Sakura flower */}
               <div className="absolute left-6 top-6 z-10 flex h-3 w-3 -translate-x-1/2 items-center justify-center md:left-1/2">

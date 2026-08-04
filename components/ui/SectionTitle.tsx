@@ -12,7 +12,7 @@ export default function SectionTitle({
   const alignment = align === "center" ? "text-center mx-auto" : "text-left";
 
   return (
-    <div className={`mb-16 max-w-2xl ${alignment}`}>
+    <div className={`mb-16 max-w-2xl ${alignment}`} data-aos="fade-up">
       {/* Sakura Badge */}
       <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--sakura-300)]/20 bg-[var(--sakura-300)]/10 px-4 py-1.5 text-xs font-medium tracking-wider uppercase text-[var(--sakura-300)]">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="opacity-80">

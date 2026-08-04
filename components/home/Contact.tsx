@@ -48,65 +48,17 @@ export default function Contact() {
           subtitle="Jangan ragu untuk menghubungi saya. Mari berkolaborasi!"
         />
 
-        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2">
-
-          {/* Left — Contact Form */}
-          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 backdrop-blur-md">
-            <h3 className="text-xl font-bold text-white">
-              Kirim Pesan 🌸
-            </h3>
-            <p className="mt-2 text-sm text-[var(--text-muted)]">
-              Saya akan membalas secepat mungkin.
-            </p>
-
-            <form className="mt-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label htmlFor="contact-name" className="mb-2 block text-sm font-medium text-[var(--text-secondary)]">Nama</label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  placeholder="Nama lengkap"
-                  className="w-full rounded-xl border border-[var(--border)] bg-[var(--background)]/60 px-4 py-3 text-sm text-white placeholder-[var(--text-muted)] outline-none transition-all duration-200 focus:border-[var(--sakura-300)]/40 focus:ring-2 focus:ring-[var(--sakura-300)]/10"
-                />
-              </div>
-              <div>
-                <label htmlFor="contact-email" className="mb-2 block text-sm font-medium text-[var(--text-secondary)]">Email</label>
-                <input
-                  id="contact-email"
-                  type="email"
-                  placeholder="email@example.com"
-                  className="w-full rounded-xl border border-[var(--border)] bg-[var(--background)]/60 px-4 py-3 text-sm text-white placeholder-[var(--text-muted)] outline-none transition-all duration-200 focus:border-[var(--sakura-300)]/40 focus:ring-2 focus:ring-[var(--sakura-300)]/10"
-                />
-              </div>
-              <div>
-                <label htmlFor="contact-message" className="mb-2 block text-sm font-medium text-[var(--text-secondary)]">Pesan</label>
-                <textarea
-                  id="contact-message"
-                  rows={5}
-                  placeholder="Tulis pesan Anda..."
-                  className="w-full resize-none rounded-xl border border-[var(--border)] bg-[var(--background)]/60 px-4 py-3 text-sm text-white placeholder-[var(--text-muted)] outline-none transition-all duration-200 focus:border-[var(--sakura-300)]/40 focus:ring-2 focus:ring-[var(--sakura-300)]/10"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-xl bg-gradient-to-r from-[var(--sakura-300)] to-[var(--accent)] py-3.5 text-sm font-semibold text-[var(--background)] shadow-lg shadow-[var(--sakura-300)]/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--sakura-300)]/40"
-              >
-                Kirim Pesan 🌸
-              </button>
-            </form>
-          </div>
-
-          {/* Right — Info & Socials */}
+        <div className="mx-auto max-w-3xl">
           <div className="flex flex-col gap-6">
 
             {/* Info Card */}
-            <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 backdrop-blur-md">
+            <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 backdrop-blur-md" data-aos="fade-up" data-aos-delay="100">
               <h3 className="text-xl font-bold text-white">
                 Mari Terhubung
               </h3>
               <p className="mt-3 leading-relaxed text-[var(--text-muted)]">
                 Saya terbuka untuk peluang kerja, kolaborasi proyek, atau sekadar berdiskusi
-                tentang teknologi. Jangan ragu untuk menghubungi saya melalui form atau social media.
+                tentang teknologi. Jangan ragu untuk menghubungi saya melalui social media.
               </p>
 
               {/* Location */}
@@ -122,18 +74,20 @@ export default function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 backdrop-blur-md">
+            <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 backdrop-blur-md" data-aos="fade-up" data-aos-delay="200">
               <h3 className="mb-5 text-lg font-bold text-white">
                 Social Media
               </h3>
-              <div className="grid grid-cols-2 gap-3">
-                {SOCIALS.map((social) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {SOCIALS.map((social, i) => (
                   <a
                     key={social.name}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 rounded-xl border border-[var(--border)] bg-[var(--background)]/40 p-4 text-[var(--text-secondary)] transition-all duration-300 hover:border-[var(--sakura-300)]/20 hover:bg-[var(--sakura-300)]/5 hover:text-[var(--sakura-300)]"
+                    data-aos="fade-up"
+                    data-aos-delay={i * 100}
                   >
                     {social.icon}
                     <span className="text-sm font-medium">{social.name}</span>
@@ -142,7 +96,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
         </div>
       </Container>
     </section>

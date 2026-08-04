@@ -4,7 +4,7 @@ export type Project = {
   description: string;
   techs: string[];
   gradient: string;
-  githubUrl: string;
+  githubUrl?: string;
   images: string[];
   details: {
     objective: string;
@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
       "Aplikasi web yang dikembangkan untuk mendukung pengelolaan inventaris teknisi di PT. Aplikanusa Lintasarta Duri. Sistem menyediakan fitur manajemen data barang, kategori, peminjaman, pengembalian, laporan PDF, pencarian dan filter data, serta notifikasi email otomatis menggunakan Laravel dan MySQL.",
     techs: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "Xampp"],
     gradient: "from-red-500/20 to-orange-500/20",
-    githubUrl: "https://github.com/CiciSisilia",
+    githubUrl: "https://github.com/CiciSisilia/sistem-inventaris-teknisi",
     images: [
       "/images/projects/inventaris.png",
       "/images/projects/inventaris-1.png",
@@ -82,13 +82,38 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    slug: "poster-webdesign",
+    title: "Poster Webdesign",
+    description:
+      "Pembuatan poster SI INTEL dilakukan menggunakan CorelDRAW dengan menerapkan prinsip desain yang menarik, informatif, dan profesional. Poster dirancang untuk memperkenalkan Sistem Inventaris Teknisi Lintasarta melalui penyusunan layout, pemilihan warna, tipografi, ikon, serta elemen visual yang menampilkan fitur, keunggulan, dan teknologi yang digunakan sehingga informasi dapat disampaikan secara jelas dan mudah dipahami.",
+    techs: ["CorelDRAW", "Layout Design", "Graphic Design"],
+    gradient: "from-pink-500/20 to-purple-500/20",
+    images: [
+      "/images/projects/posterweb.png",
+    ],
+    details: {
+      objective:
+        "Merancang poster promosi SI INTEL yang informatif, menarik, dan profesional sebagai media publikasi sistem.",
+      features: [
+        "Layout modern dan terstruktur",
+        "Kombinasi warna sesuai identitas instansi",
+        "Tipografi yang mudah dibaca",
+        "Mockup laptop dan smartphone",
+        "Penyajian fitur, keunggulan, dan arsitektur sistem secara visual",
+      ],
+      challenges:
+        "Menyusun informasi yang cukup banyak ke dalam satu poster tanpa mengurangi keterbacaan dan estetika.",
+      solutions:
+        "Menggunakan layout yang terstruktur, hierarki visual yang jelas, serta pemilihan warna, ikon, dan tipografi yang konsisten agar informasi mudah dipahami."
+    },
+  },
+  {
     slug: "analisis-interaktif-persebaran-dan-dampak-bencana-alam-di-indonesia-berdasarkan-lokasi-jenis-dan-waktu",
     title: "Analisis Interaktif Persebaran dan Dampak Bencana Alam di Indonesia Berdasarkan Lokasi, Jenis, dan Waktu",
     description:
       "Membangun dashboard interaktif menggunakan Tableau Public untuk menganalisis persebaran dan dampak bencana alam di Indonesia berdasarkan lokasi, jenis, dan waktu menggunakan data BNPB periode 2018–2024. Dashboard menyediakan visualisasi spasial, temporal, dan analisis dampak guna mendukung pengambilan keputusan serta mitigasi bencana.",
     techs: ["Tableau"],
     gradient: "from-blue-500/20 to-cyan-500/20",
-    githubUrl: "https://github.com/CiciSisilia",
     images: [
       "/images/projects/datavisual.png",
       "/images/projects/datavisual-1.png",

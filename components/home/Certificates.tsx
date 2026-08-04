@@ -90,6 +90,23 @@ export default function Certificates() {
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
   const [pageIndex, setPageIndex] = useState(0);
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+  const totalPagesCert = Math.ceil(CERTIFICATES.length / itemsPerPage);
+  
+  const currentCertificates = CERTIFICATES.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handleNextPage = () => {
+    setCurrentPage((prev) => (prev < totalPagesCert ? prev + 1 : 1));
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prev) => (prev > 1 ? prev - 1 : totalPagesCert));
+  };
+
   const openCert = (cert: Certificate) => {
     setSelectedCert(cert);
     setPageIndex(0);
@@ -136,10 +153,12 @@ export default function Certificates() {
         />
 
         <div className="mx-auto grid max-w-4xl gap-4">
-          {CERTIFICATES.map((cert, i) => (
+          {currentCertificates.map((cert, i) => (
             <div
               key={i}
               className="group flex flex-col gap-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/40 p-4 backdrop-blur-md transition-all duration-300 hover:border-[var(--sakura-300)]/20 hover:bg-[var(--surface)]/60 sm:flex-row sm:items-center sm:p-5"
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
             >
               {/* Certificate Image Column / Thumbnail */}
               <div
@@ -209,6 +228,34 @@ export default function Certificates() {
             </div>
           ))}
         </div>
+
+        {totalPagesCert > 1 && (
+          <div className="mx-auto mt-8 flex max-w-4xl items-center justify-center gap-4">
+            <button
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+              className="flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--surface)]/50 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-[var(--sakura-300)]/10 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+              Sebelumnya
+            </button>
+            <span className="text-sm font-medium text-[var(--text-muted)]">
+              {currentPage} / {totalPagesCert}
+            </span>
+            <button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPagesCert}
+              className="flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--surface)]/50 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-[var(--sakura-300)]/10 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Selanjutnya
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        )}
       </Container>
 
       {/* Lightbox Modal for Certificate Preview */}
