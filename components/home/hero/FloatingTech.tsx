@@ -66,56 +66,56 @@ const TypeScriptIcon = () => (
 const techs: TechItem[] = [
   {
     name: "Laravel",
-    className: "top-4 -left-6",
+    className: "top-10 -left-8 sm:-left-12",
     color: "#FF2D20",
     delay: "0s",
     icon: <LaravelIcon />,
   },
   {
     name: "React",
-    className: "-top-8 left-[30%]",
+    className: "-top-10 left-[25%]",
     color: "#61DAFB",
     delay: "0.8s",
     icon: <ReactIcon />,
   },
   {
     name: "Next.js",
-    className: "top-4 -right-6",
+    className: "top-10 -right-8 sm:-right-12",
     color: "#ffffff",
     delay: "1.6s",
     icon: <NextJsIcon />,
   },
   {
     name: "MySQL",
-    className: "bottom-[35%] -left-12",
+    className: "top-1/2 -translate-y-1/2 -left-10 sm:-left-14",
     color: "#4479A1",
     delay: "0.4s",
     icon: <MySQLIcon />,
   },
   {
     name: "PHP",
-    className: "-top-4 right-[20%]",
+    className: "-top-8 right-[20%]",
     color: "#777BB4",
     delay: "1.2s",
     icon: <PHPIcon />,
   },
   {
     name: "JavaScript",
-    className: "bottom-[20%] -right-10",
+    className: "top-1/2 -translate-y-1/2 -right-10 sm:-right-14",
     color: "#F7DF1E",
     delay: "2s",
     icon: <JavaScriptIcon />,
   },
   {
     name: "HTML",
-    className: "bottom-8 left-[15%]",
+    className: "-bottom-6 left-[20%] sm:-bottom-8",
     color: "#E34F26",
     delay: "2.4s",
     icon: <HTMLIcon />,
   },
   {
     name: "TypeScript",
-    className: "bottom-4 -right-4",
+    className: "-bottom-6 right-[20%] sm:-bottom-8",
     color: "#3178C6",
     delay: "2.8s",
     icon: <TypeScriptIcon />,
@@ -128,7 +128,7 @@ export default function FloatingTech() {
       {techs.map((tech) => (
         <div
           key={tech.name}
-          className={`absolute z-20 ${tech.className}`}
+          className={`absolute z-0 ${tech.className}`}
           style={{
             animation: `float 6s ease-in-out infinite`,
             animationDelay: tech.delay,

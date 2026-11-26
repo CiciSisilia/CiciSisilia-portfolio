@@ -42,8 +42,17 @@ const icons = {
   mysql: (
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.063h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.468-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.822.616 1.42.616.26 0 .506-.044.735-.133l1.297.66.336-.477h.003zm-2.031-.824c-.596 0-.894-.656-.894-1.97 0-1.322.295-1.984.888-1.984.588 0 .882.66.882 1.98 0 1.32-.293 1.974-.876 1.974zm-2.143-3.758c0 .664-.234 1.14-.7 1.428-.335.207-.78.31-1.335.31h-.336v2.228h-.885v-5.53h1.26c.6 0 1.05.12 1.35.362.334.27.5.66.5 1.17l.002.032h.144zm-.992.025c0-.506-.273-.76-.82-.76h-.27v1.57h.218c.294 0 .513-.06.654-.182.13-.12.218-.32.218-.628z"/></svg>
   ),
+  tailwind: (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+  ),
+  bootstrap: (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 00-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 00-1.276.057L.327 7.261A1 1 0 00.326 8.74L3.899 12 .326 15.26a1 1 0 00.001 1.479L1.65 17.94a.999.999 0 001.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 001.704.29l4.942-2.377A1.5 1.5 0 0024 20.06V3.939a1.5 1.5 0 00-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+  ),
   git: (
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M23.546 10.93L13.067.452a1.55 1.55 0 00-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 012.327 2.341l2.66 2.66a1.838 1.838 0 011.9 3.039 1.837 1.837 0 01-2.6 0 1.846 1.846 0 01-.4-2.005l-2.48-2.48v6.528a1.84 1.84 0 11-1.5-.06V9.753a1.838 1.838 0 01-1-2.452l-2.72-2.72-7.18 7.193a1.55 1.55 0 000 2.188l10.48 10.477a1.55 1.55 0 002.186 0l10.44-10.42a1.55 1.55 0 00-.003-2.19z"/></svg>
+  ),
+  github: (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
   ),
   figma: (
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 00-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg>
@@ -63,48 +72,99 @@ const icons = {
   coreldraw: (
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4.5 7 12 4.5 19.5 7 12 9.5zm0 12.5L2 17v-6l10 5 10-5v6l-10 5z"/></svg>
   ),
+  tableau: (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M11.37 0v2.73h1.26V0h-1.26zm0 21.27V24h1.26v-2.73h-1.26zm-9.1 0v-1.26H0v1.26h2.27zm19.46 0v-1.26H24v1.26h-2.27zm-14.8-4.73v-1.27H4.55v1.27h2.38zm10.14 0v-1.27h-2.38v1.27h2.38zm-5.07-5.07V6.09h-1.26v5.38H5.45v1.26h5.38v5.38h1.26v-5.38h5.38v-1.26h-5.38zm-7.46-5.07V5.13H2.27v1.27h2.27zm14.92 0V5.13h-2.27v1.27h2.27zM2.27 12.73v-1.26H0v1.26h2.27zm21.73 0v-1.26h-2.27v1.26H24z"/></svg>
+  ),
+  network: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><rect x="2" y="2" width="6" height="5" rx="1"/><rect x="16" y="2" width="6" height="5" rx="1"/><rect x="9" y="17" width="6" height="5" rx="1"/><path d="M5 7v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"/><path d="M12 13v4"/></svg>
+  ),
+  support: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+  ),
+  customerService: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+  ),
+  telemarketing: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  ),
+  pos: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M6 12h.01"/><path d="M10 12h.01"/><path d="M14 12h.01"/><path d="M18 12h.01"/><path d="M6 16h12"/></svg>
+  ),
+  users: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+  ),
+  language: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+  ),
 };
 
 const CATEGORIES: SkillCategory[] = [
   {
-    title: "Frontend",
-    skills: [
-      { name: "HTML5", icon: icons.html, color: "#E34F26" },
-      { name: "CSS3", icon: icons.css, color: "#1572B6" },
-      { name: "JavaScript", icon: icons.js, color: "#F7DF1E" },
-      { name: "TypeScript", icon: icons.ts, color: "#3178C6" },
-      { name: "React", icon: icons.react, color: "#61DAFB" },
-      { name: "Next.js", icon: icons.nextjs, color: "#ffffff" },
-    ],
-  },
-  {
-    title: "Backend",
+    title: "Web Development & Database",
     skills: [
       { name: "PHP", icon: icons.php, color: "#777BB4" },
       { name: "Laravel", icon: icons.laravel, color: "#FF2D20" },
-    ],
-  },
-  {
-    title: "Database",
-    skills: [
       { name: "MySQL", icon: icons.mysql, color: "#4479A1" },
+      { name: "Next.js", icon: icons.nextjs, color: "#ffffff" },
+      { name: "React", icon: icons.react, color: "#61DAFB" },
+      { name: "TypeScript", icon: icons.ts, color: "#3178C6" },
+      { name: "JavaScript", icon: icons.js, color: "#F7DF1E" },
+      { name: "HTML5 & CSS3", icon: icons.html, color: "#E34F26" },
+      { name: "Tailwind CSS", icon: icons.tailwind, color: "#38BDF8" },
     ],
   },
   {
-    title: "Tools",
+    title: "Data Administration & Office Productivity",
     skills: [
-      { name: "Git", icon: icons.git, color: "#F05032" },
-      { name: "Figma", icon: icons.figma, color: "#F24E1E" },
+      { name: "Microsoft Excel", icon: icons.msoffice, color: "#107C41" },
+      { name: "MS Office Suite", icon: icons.msoffice, color: "#D83B01" },
+      { name: "Validasi Database", icon: icons.mysql, color: "#0078D4" },
+      { name: "Data Entry", icon: icons.msoffice, color: "#2B579A" },
+      { name: "Dokumentasi Laporan", icon: icons.msoffice, color: "#F25022" },
+      { name: "Pengarsipan Data", icon: icons.msoffice, color: "#FFB900" },
+    ],
+  },
+  {
+    title: "Customer Service & Digital Marketing",
+    skills: [
+      { name: "Customer Service", icon: icons.customerService, color: "#F472B6" },
+      { name: "Telemarketing", icon: icons.telemarketing, color: "#38BDF8" },
+      { name: "WhatsApp Business", icon: icons.telemarketing, color: "#25D366" },
+      { name: "Point of Sale (POS)", icon: icons.pos, color: "#F59E0B" },
+      { name: "Digital Ads Property", icon: icons.canva, color: "#A78BFA" },
+      { name: "Lead Segmentation", icon: icons.users, color: "#34D399" },
+    ],
+  },
+  {
+    title: "Networking & IT Support",
+    skills: [
+      { name: "Basic Networking", icon: icons.network, color: "#60A5FA" },
+      { name: "Network Troubleshooting", icon: icons.support, color: "#EF4444" },
+      { name: "Kabel LAN & Fiber Optik", icon: icons.network, color: "#10B981" },
+      { name: "Alat Tes Jaringan", icon: icons.support, color: "#F97316" },
+      { name: "IT Hardware Support", icon: icons.vscode, color: "#818CF8" },
+    ],
+  },
+  {
+    title: "Tools & Design",
+    skills: [
+      { name: "Git & GitHub", icon: icons.git, color: "#F05032" },
       { name: "VS Code", icon: icons.vscode, color: "#007ACC" },
-      { name: "Canva", icon: icons.canva, color: "#00C4CC" },
-      { name: "Corel Draw", icon: icons.coreldraw, color: "#22AB3B" },
+      { name: "Figma", icon: icons.figma, color: "#F24E1E" },
+      { name: "Tableau Public", icon: icons.tableau, color: "#E97627" },
+      { name: "Microsoft Fabric", icon: icons.msfabric, color: "#0078D4" },
+      { name: "Canva & CorelDRAW", icon: icons.canva, color: "#00C4CC" },
     ],
   },
   {
-    title: "Other",
+    title: "Soft Skills & Languages",
     skills: [
-      { name: "MS Office", icon: icons.msoffice, color: "#D83B01" },
-      { name: "MS Fabric", icon: icons.msfabric, color: "#0078D4" },
+      { name: "Team Collaboration", icon: icons.users, color: "#4CAF50" },
+      { name: "Problem Solving", icon: icons.support, color: "#F59E0B" },
+      { name: "Ketelitian & Detail", icon: icons.pos, color: "#EC4899" },
+      { name: "Cepat Beradaptasi", icon: icons.customerService, color: "#8B5CF6" },
+      { name: "Bahasa Indonesia (Native)", icon: icons.language, color: "#EF4444" },
+      { name: "English (TOEFL 553)", icon: icons.language, color: "#3B82F6" },
     ],
   },
 ];
@@ -112,24 +172,26 @@ const CATEGORIES: SkillCategory[] = [
 export default function Skills() {
   return (
     <section id="skills" className="section-padding relative overflow-hidden scroll-mt-20 md:scroll-mt-24">
-
       {/* Background glows */}
       <div className="animate-pulse-glow absolute left-[-150px] top-1/4 h-[350px] w-[350px] rounded-full bg-[var(--accent)]/10 blur-[160px]" />
+      <div className="animate-pulse-glow absolute right-[-150px] bottom-1/4 h-[350px] w-[350px] rounded-full bg-[var(--sakura-300)]/10 blur-[160px]" />
 
       <Container>
         <SectionTitle
-          title="Skills"
-          subtitle="Teknologi dan tools yang saya gunakan untuk membangun solusi digital."
+          title="Skills & Competencies"
+          subtitle="Keahlian teknis, administratif, operasional, dan interpersonal yang saya miliki."
         />
 
-        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-          {CATEGORIES.map((cat) => (
+        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+          {CATEGORIES.map((cat, ci) => (
             <div
               key={cat.title}
               className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/40 p-5 backdrop-blur-md transition-all duration-300 hover:border-[var(--sakura-300)]/15 hover:bg-[var(--surface)]/60"
+              data-aos="fade-up"
+              data-aos-delay={ci * 100}
             >
-              <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-white">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--sakura-300)]" />
+              <h3 className="mb-4 flex items-center gap-2 text-base font-bold text-white sm:text-lg">
+                <span className="h-2 w-2 rounded-full bg-[var(--sakura-300)] shadow-sm shadow-[var(--sakura-300)]" />
                 {cat.title}
               </h3>
 
@@ -137,7 +199,7 @@ export default function Skills() {
                 {cat.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="group flex flex-col items-center gap-2 rounded-2xl border border-[var(--border)] bg-[var(--background)]/60 p-3 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--sakura-300)]/20 hover:shadow-lg hover:shadow-[var(--sakura-300)]/5"
+                    className="group flex flex-col items-center justify-center gap-2 rounded-2xl border border-[var(--border)] bg-[var(--background)]/60 p-3 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--sakura-300)]/20 hover:shadow-lg hover:shadow-[var(--sakura-300)]/5"
                   >
                     <div
                       className="transition-transform duration-300 group-hover:scale-110"
@@ -145,7 +207,7 @@ export default function Skills() {
                     >
                       {skill.icon}
                     </div>
-                    <span className="text-xs font-medium text-[var(--text-secondary)]">
+                    <span className="text-xs font-medium leading-tight text-[var(--text-secondary)]">
                       {skill.name}
                     </span>
                   </div>

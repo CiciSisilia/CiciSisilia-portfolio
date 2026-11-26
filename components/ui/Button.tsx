@@ -1,4 +1,4 @@
-type ButtonProps = {
+﻿type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   href?: string;

@@ -9,7 +9,7 @@ const INFO_CARDS = [
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
     ),
     label: "Lokasi",
-    value: "Riau, Indonesia",
+    value: "Pekanbaru, Riau, Indonesia",
   },
   {
     icon: (
@@ -23,7 +23,7 @@ const INFO_CARDS = [
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" /></svg>
     ),
     label: "Gelar",
-    value: "Ahli Madya (A.Md.)",
+    value: "Ahli Madya Komputer (A.Md.Kom.)",
   },
   {
     icon: (
@@ -35,12 +35,12 @@ const INFO_CARDS = [
 ];
 
 const INTERESTS = [
-  "Web Development",
-  "UI/UX Design",
-  "Graphic Design",
-  "Data Analytics",
-  "Microsoft Fabric",
-  "Artificial Intelligence",
+  "Web Development (Laravel, Next.js)",
+  "Data Administration & Analytics",
+  "IT Support & Networking",
+  "UI/UX & Graphic Design",
+  "Customer Service & Digital Marketing",
+  "Artificial Intelligence (AI)",
 ];
 
 export default function About() {
@@ -81,7 +81,11 @@ export default function About() {
             </h3>
 
             <p className="mt-4 leading-8 text-[var(--text-secondary)]">
-              Saya adalah lulusan D3 Manajemen Informatika Universitas Riau yang memiliki kompetensi dalam pengembangan sistem informasi berbasis web dan manajemen basis data. Menguasai PHP, Laravel, MySQL, HTML, CSS, JavaScript, serta konsep Object-Oriented Programming (OOP). Memiliki minat pada Artificial Intelligence (AI), kemampuan analisis, problem solving, cepat beradaptasi, dan mampu bekerja secara individu maupun dalam tim.
+              Saya adalah lulusan D3 Manajemen Informatika dari Universitas Riau dengan IPK 3.64/4.00 (Cum Laude) yang memiliki pengalaman kolaboratif di bidang pengembangan web, administrasi data, dukungan teknis IT, pelayanan pelanggan, dan pemasaran.
+            </p>
+
+            <p className="mt-4 leading-8 text-[var(--text-secondary)]">
+              Saya memiliki rekam jejak praktis dalam merancang aplikasi web inventaris berbasis Laravel dan mendukung operasional jaringan saat magang di <strong className="font-semibold text-white">PT Aplikanusa Lintasarta</strong>, mengelola transaksi serta layanan pelanggan di <strong className="font-semibold text-white">Bluu Donut</strong>, hingga menjalankan strategi pemasaran digital, telemarketing, dan validasi ribuan database konsumen di <strong className="font-semibold text-white">Castavia Property</strong>. Menguasai Microsoft Office (Excel, Word, PowerPoint), pengelolaan basis data MySQL, serta sistem kasir (POS).
             </p>
 
             {/* Info Cards Grid */}

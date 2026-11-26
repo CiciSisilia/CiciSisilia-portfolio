@@ -30,11 +30,21 @@ export default function Education() {
                 <div className="mt-4 flex flex-wrap gap-3">
                   <span className="inline-flex items-center gap-2 rounded-full border border-[var(--sakura-300)]/20 bg-[var(--sakura-300)]/10 px-4 py-1.5 text-sm text-[var(--sakura-300)]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    2023 — 2026
+                    Agustus 2023 — Juni 2026
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-1.5 text-sm text-emerald-300">
-                    IPK: 3.64
+                    IPK: 3.64 / 4.00 (Cum Laude)
                   </span>
+                </div>
+
+                {/* Tugas Akhir */}
+                <div className="mt-4 rounded-2xl border border-[var(--border)] bg-[var(--background)]/50 p-4 transition-colors hover:border-[var(--sakura-300)]/20">
+                  <p className="flex items-center gap-1.5 text-xs font-semibold text-[var(--sakura-300)]">
+                    <span>📝</span> Tugas Akhir (Final Project)
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                    Perancangan Sistem Informasi Pengelolaan Inventaris Teknisi Berbasis Web Pada PT. Aplikanusa Lintasarta Duri.
+                  </p>
                 </div>
               </div>
             </div>

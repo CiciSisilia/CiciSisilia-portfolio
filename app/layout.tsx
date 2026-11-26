@@ -9,13 +9,14 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Cici Sisilia | Junior Web Developer — Portfolio",
+  title: "Cici Sisilia | Junior Web Developer & Data Specialist — Portfolio",
   description:
-    "Portfolio Cici Sisilia — Fresh Graduate Manajemen Informatika dari Universitas Riau. Berpengalaman di Laravel, React, Next.js, PHP, JavaScript, MySQL. Terbuka untuk peluang kerja di bidang Web Development dan Data Analytics.",
+    "Portfolio Cici Sisilia — Fresh Graduate D3 Manajemen Informatika Universitas Riau (IPK 3.64/4.00 Cum Laude). Memiliki kompetensi dalam Web Development (Laravel, Next.js, MySQL), Administrasi Data, Layanan Pelanggan, dan IT Support.",
   keywords: [
     "Cici Sisilia",
     "Portfolio",
     "Web Developer",
+    "Data Specialist",
     "Laravel",
     "React",
     "Next.js",
@@ -24,12 +25,14 @@ export const metadata: Metadata = {
     "MySQL",
     "Fresh Graduate",
     "Universitas Riau",
+    "Castavia Property",
+    "Lintasarta",
   ],
   authors: [{ name: "Cici Sisilia" }],
   openGraph: {
-    title: "Cici Sisilia | Junior Web Developer",
+    title: "Cici Sisilia | Junior Web Developer & Data Specialist",
     description:
-      "Fresh Graduate Manajemen Informatika — Laravel, React, Next.js Developer",
+      "Fresh Graduate D3 Manajemen Informatika Universitas Riau — Web Developer & Data Specialist",
     type: "website",
   },
 };

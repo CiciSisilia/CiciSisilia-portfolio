@@ -36,17 +36,12 @@ export default function Hero() {
 
             {/* Job */}
             <h2 className="animate-slide-up mt-6 text-xl font-medium text-[var(--text-secondary)] md:text-2xl" style={{ animationDelay: "200ms" }}>
-              Computer Science Fresh Graduate | Junior Web Developer | Aspiring Data Analyst
+              Computer Science Fresh Graduate | Junior Web Developer | Data & Admin Specialist
             </h2>
 
             {/* Description */}
             <p className="animate-slide-up mt-8 max-w-xl leading-8 text-[var(--text-muted)]" style={{ animationDelay: "400ms" }}>
-              Saya adalah lulusan D3 Manajemen Informatika Universitas Riau yang memiliki kompetensi dalam pengembangan sistem informasi berbasis web dan manajemen basis data. Menguasai PHP, Laravel, MySQL, HTML, CSS, JavaScript, serta konsep Object-Oriented Programming (OOP).
-
-              <br />
-              <br />
-
-              Saya memiliki minat pada Artificial Intelligence (AI), kemampuan analisis, problem solving, cepat beradaptasi, dan mampu bekerja secara individu maupun dalam tim.
+              Lulusan D3 Manajemen Informatika Universitas Riau yang memiliki kompetensi dalam pengembangan sistem informasi berbasis web dan manajemen basis data. Cepat beradaptasi, berorientasi problem solving, dan siap berkontribusi.
             </p>
 
             {/* Buttons */}
@@ -62,8 +57,8 @@ export default function Hero() {
             {/* Stats */}
             <div className="animate-slide-up mt-12 flex gap-8" style={{ animationDelay: "800ms" }}>
               {[
-                { value: "3+", label: "Projects" },
-                { value: "8+", label: "Tech Stack" },
+                { value: "4+", label: "Projects" },
+                { value: "10+", label: "Tech Stack" },
                 { value: "1+", label: "Year Exp" },
               ].map((stat) => (
                 <div key={stat.label}>

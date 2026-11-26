@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 /**
  * SakuraParticles — CSS‑only falling cherry‑blossom petals.

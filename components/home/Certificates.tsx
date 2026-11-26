@@ -16,10 +16,81 @@ type Certificate = {
 
 const CERTIFICATES: Certificate[] = [
   {
+    title: "SERTIFIKAT Data Admin & Asisten Teknisi Intern At PT Aplikanusa Lintasarta Duri 2025 ",
+    issuer: "PT Aplikanusa Lintasarta Duri",
+    date: "Juli - September 2025",
+    icon: "🌐",
+    color: "from-indigo-500/20 to-blue-500/20",
+    images: ["/images/certificates/maganglintasarta.jpeg",
+    ]
+  },
+  {
+    title: "SERTIFIKAT Marketing Intern At Castavia Property 2026 ",
+    issuer: "Castavia Property",
+    date: "Oktober - November 2026",
+    icon: "🌐",
+    color: "from-indigo-500/20 to-blue-500/20",
+    images: ["/images/certificates/magangcastavia.jpg",
+    ]
+  },
+  {
+    title: "TOEFL ITP Prediction Test (Skor: 553)",
+    issuer: "Central Course",
+    date: "Oktober 2026",
+    icon: "🌐",
+    color: "from-indigo-500/20 to-blue-500/20",
+    images: ["/images/certificates/toefl.jpg",
+    ]
+  },
+  {
+    title: "Belajar Penerapan Data Science dengan Microsoft Fabric",
+    issuer: "Dicoding Indonesia",
+    date: "September 2026",
+    icon: "📊",
+    color: "from-orange-500/20 to-amber-500/20",
+    images: ["/images/certificates/microsoftfabric.png",
+    ],
+  },
+  {
+    title: "Microsoft Office Specialist (Excel, Word, PowerPoint)",
+    issuer: "KarirNex",
+    date: "Agustus 2026",
+    icon: "💼",
+    color: "from-emerald-500/20 to-teal-500/20",
+    images: ["/images/certificates/excelkarirnext.png",
+    ],
+  },
+  {
+    title: "Fundamental of Assistant Web Developer — Nasional",
+    issuer: "Pusat Pengembangan Talenta Digital (PPTD) — Komdigi (Digital Talent Scholarship)",
+    date: "2026",
+    icon: "⚛️",
+    color: "from-cyan-500/20 to-blue-500/20",
+    images: [
+      "/images/certificates/fundamental1.png",
+      "/images/certificates/fundamental2.png",
+    ],
+  },
+  {
+    title: "Pelatihan Gerakan Nasional Indonesia Kompeten (GNIK)",
+    issuer: "Gerakan Nasional Indonesia Kompeten (GNIK)",
+    date: "2026",
+    icon: "🎨",
+    color: "from-purple-500/20 to-pink-500/20",
+    images: [
+      "/images/certificates/gnik1.png",
+      "/images/certificates/gnik2.png",
+      "/images/certificates/gnik3.png",
+      "/images/certificates/gnik4.jpg",
+      "/images/certificates/gnik5.jpg",
+      "/images/certificates/gnik6.jpg",
+    ],
+  },
+  {
     title: "Belajar Dasar AI",
     issuer: "Dicoding Indonesia",
     date: "2026",
-    icon: "🌐",
+    icon: "🤖",
     color: "from-blue-500/20 to-cyan-500/20",
     images: [
       "/images/certificates/sertifikatbasicai1.png",
@@ -27,14 +98,13 @@ const CERTIFICATES: Certificate[] = [
     ],
   },
   {
-    title: "Fundamental of Assistant Web Developer – Nasional",
-    issuer: "Pusat Pengembangan Talenta Digital (PPTD) – Badan Pengembangan SDM Komunikasi dan Digital (Komdigi) ",
-    date: "2026",
-    icon: "⚛️",
-    color: "from-cyan-500/20 to-blue-500/20",
+    title: "Work Practice Certificate — PT Aplikanusa Lintasarta",
+    issuer: "PT Aplikanusa Lintasarta",
+    date: "Juli 2025 — September 2025",
+    icon: "📋",
+    color: "from-orange-500/20 to-amber-500/20",
     images: [
-      "/images/certificates/fundamental1.png",
-      "/images/certificates/fundamental2.png",
+      "/images/certificates/sertifikatmagang.jpeg",
     ],
   },
   {
@@ -48,42 +118,6 @@ const CERTIFICATES: Certificate[] = [
       "/images/certificates/sertifikatweb32025.png",
     ],
   },
-  {
-    title: "Work Practice Certificate – PT Aplikanusa Lintasarta",
-    issuer: "PT Aplikanusa Lintasarta",
-    date: "Juli 2025 — September 2025",
-    icon: "📊",
-    color: "from-orange-500/20 to-amber-500/20",
-    images: [
-      "/images/certificates/sertifikatmagang.jpeg",
-    ],
-  },
-  {
-    title: "IDCamp Connect Roadshow-Riau (Certificate of Attendance)",
-    issuer: "Dicoding Indonesia",
-    date: "Rabu 5 November 2025",
-    icon: "📊",
-    color: "from-orange-500/20 to-amber-500/20",
-    images: [
-      "/images/certificates/kehadirandicoding.jpg",
-    ],
-  },
-  {
-    title: "Pelatihan Gerakan Nasional Indonesia Kompeten",
-    issuer: "GNIK",
-    date: "2026",
-    icon: "🎨",
-    color: "from-purple-500/20 to-pink-500/20",
-    images: [
-      "/images/certificates/gnik1.png",
-      "/images/certificates/gnik2.png",
-      "/images/certificates/gnik3.png",
-      "/images/certificates/gnik4.jpg",
-      "/images/certificates/gnik5.jpg",
-      "/images/certificates/gnik6.jpg",
-
-    ],
-  },
 ];
 
 export default function Certificates() {
@@ -93,7 +127,7 @@ export default function Certificates() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
   const totalPagesCert = Math.ceil(CERTIFICATES.length / itemsPerPage);
-  
+
   const currentCertificates = CERTIFICATES.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
@@ -108,6 +142,7 @@ export default function Certificates() {
   };
 
   const openCert = (cert: Certificate) => {
+    if (cert.images.length === 0) return;
     setSelectedCert(cert);
     setPageIndex(0);
   };
@@ -137,12 +172,10 @@ export default function Certificates() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCert, handleNext, handlePrev]);
 
   return (
     <section id="certificates" className="section-padding relative overflow-hidden scroll-mt-20 md:scroll-mt-24">
-
       {/* Background glow */}
       <div className="animate-pulse-glow absolute left-[-100px] top-1/3 h-[350px] w-[350px] rounded-full bg-[var(--accent)]/8 blur-[160px]" />
 
@@ -162,28 +195,39 @@ export default function Certificates() {
             >
               {/* Certificate Image Column / Thumbnail */}
               <div
-                onClick={() => openCert(cert)}
-                className="relative h-28 w-full shrink-0 cursor-pointer overflow-hidden rounded-xl border border-[var(--border)] bg-black/40 sm:h-20 sm:w-32"
+                onClick={() => {
+                  if (cert.images.length > 0) openCert(cert);
+                }}
+                className={`relative h-28 w-full shrink-0 overflow-hidden rounded-xl border border-[var(--border)] bg-black/40 sm:h-20 sm:w-32 ${cert.images.length > 0 ? "cursor-pointer" : "cursor-default"
+                  }`}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={cert.images[0]}
-                  alt={`Sertifikat ${cert.title}`}
-                  className="h-full w-full object-cover opacity-85 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--sakura-300)] text-[var(--background)] shadow-md">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
-                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                      <circle cx="12" cy="12" r="3" />
-                    </svg>
-                  </span>
-                </div>
-                {/* Multi-page badge */}
-                {cert.images.length > 1 && (
-                  <span className="absolute bottom-1.5 right-1.5 rounded-md bg-black/70 px-1.5 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm">
-                    {cert.images.length} hal
-                  </span>
+                {cert.images.length > 0 ? (
+                  <>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={cert.images[0]}
+                      alt={`Sertifikat ${cert.title}`}
+                      className="h-full w-full object-cover opacity-85 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--sakura-300)] text-[var(--background)] shadow-md">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                          <circle cx="12" cy="12" r="3" />
+                        </svg>
+                      </span>
+                    </div>
+                    {/* Multi-page badge */}
+                    {cert.images.length > 1 && (
+                      <span className="absolute bottom-1.5 right-1.5 rounded-md bg-black/70 px-1.5 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm">
+                        {cert.images.length} hal
+                      </span>
+                    )}
+                  </>
+                ) : (
+                  <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${cert.color} text-3xl`}>
+                    <span>{cert.icon}</span>
+                  </div>
                 )}
               </div>
 
@@ -214,16 +258,22 @@ export default function Certificates() {
                   Verified
                 </span>
 
-                <button
-                  onClick={() => openCert(cert)}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-[var(--border)] bg-white/5 px-3.5 py-1.5 text-xs font-semibold text-white transition-all hover:border-[var(--sakura-300)]/40 hover:bg-[var(--sakura-300)]/10 hover:text-[var(--sakura-300)]"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                  View
-                </button>
+                {cert.images.length > 0 ? (
+                  <button
+                    onClick={() => openCert(cert)}
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-[var(--border)] bg-white/5 px-3.5 py-1.5 text-xs font-semibold text-white transition-all hover:border-[var(--sakura-300)]/40 hover:bg-[var(--sakura-300)]/10 hover:text-[var(--sakura-300)]"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    View
+                  </button>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-[var(--text-muted)]">
+                    Official
+                  </span>
+                )}
               </div>
             </div>
           ))}
@@ -259,7 +309,7 @@ export default function Certificates() {
       </Container>
 
       {/* Lightbox Modal for Certificate Preview */}
-      {selectedCert && (
+      {selectedCert && selectedCert.images.length > 0 && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-xl animate-fade-in"
           onClick={closeCert}
@@ -350,4 +400,3 @@ export default function Certificates() {
     </section>
   );
 }
-
